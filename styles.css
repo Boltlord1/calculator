@@ -1,0 +1,36 @@
+#calculator {
+    display: block;
+    margin: 50px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.row {
+    margin: 4px 0;
+}
+
+.button {
+    font-size: 75px;
+    font-weight: bolder;
+    height: 150px;
+    width: 150px;
+}
+
+#inputs {
+    font-size: 150px;
+    height: 150px;
+    width: auto;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+#numOne {
+    text-align: right;
+    flex:1;
+}
+
+#numTwo {
+    text-align: left;
+    flex: 1;
+    color: gray;
+}
