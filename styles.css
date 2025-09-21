@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator {
+    width: 612px;
+    margin-top: 8vh;
+    align-self: center;
+}
+
+.screen {
+    font-size: 75px;
+    margin-bottom: 2px;
+    border: 4px black solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous {
+    color: rgb(100, 100, 100);
+}
+
+.buttons {
+    width: 612px;
+}
+
+.buttons > button {
+    font-size: 75px;
+    font-weight: bolder;
+    height: 150px;
+    width: 150px;
+    margin: 2px 0;
+}
