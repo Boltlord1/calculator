@@ -45,7 +45,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 function operate(operator) {
-    if (firstNumber !== undefined && selectedOperator === operator) {
+    if (firstNumber !== undefined) {
         switch (operator) {
             case `plus`:
                 output = firstNumber + secondNumber
@@ -73,12 +73,24 @@ function operate(operator) {
     firstNumber = output
 }
 
-functions.plus.onclick = () => operate(`plus`)
-functions.minus.onclick = () => operate(`minus`)
-functions.star.onclick = () => operate(`star`)
-functions.slash.onclick = () => operate(`slash`)
 functions.equals.onclick = () => operate(selectedOperator)
 functions.clear.onclick = () => clear()
+functions.plus.onclick = () => {
+    operate(selectedOperator)
+    selectedOperator = `plus`
+}
+functions.minus.onclick = () => {
+    operate(selectedOperator)
+    selectedOperator = `minus`
+}
+functions.star.onclick = () => {
+    operate(selectedOperator)
+    selectedOperator = `star`
+}
+functions.slash.onclick = () => {
+    operate(selectedOperator)
+    selectedOperator = `slash`
+}
 
 const body = document.querySelector(`body`)
 let errorCounter = 1
