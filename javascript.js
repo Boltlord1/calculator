@@ -57,6 +57,11 @@ function operate(operator) {
                 output = firstNumber * secondNumber
             break
             case `slash`:
+                if (secondNumber === 0) {
+                    clear()
+                    createErorr()
+                    return
+                }
                 output = firstNumber / secondNumber
         }
     } else if (firstNumber === undefined) {
@@ -74,3 +79,14 @@ functions.star.onclick = () => operate(`star`)
 functions.slash.onclick = () => operate(`slash`)
 functions.equals.onclick = () => operate(selectedOperator)
 functions.clear.onclick = () => clear()
+
+const body = document.querySelector(`body`)
+let errorCounter = 1
+
+function createErorr() {
+    const errorMessage = document.createElement(`div`)
+    body.appendChild(errorMessage)
+    errorMessage.textContent = `Nice try`
+    if (errorCounter > 1) errorMessage.textContent = `Nice try x${errorCounter}`
+    errorCounter++
+}
