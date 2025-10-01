@@ -67,7 +67,7 @@ function operate(operator) {
     } else if (firstNumber === undefined) {
         output = secondNumber
     }
-    previous.textContent = output
+    previous.textContent = Math.round(output * 10000) / 10000
     current.textContent = ``
     selectedOperator = operator
     firstNumber = output
